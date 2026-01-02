@@ -34,7 +34,7 @@ class _MessPredictionScreenState extends State<MessPredictionScreen> {
 
     // 2. Prepare the URL and Data
     // REPLACE THIS URL with your actual Render URL!
-    final url = Uri.parse('https://techsprint-ai.onrender.com');
+    final url = Uri.parse('https://techsprint-ai.onrender.com/predict');
     
     final bodyData = jsonEncode({
       'poll_count': int.parse(_pollController.text), // Convert text to number
