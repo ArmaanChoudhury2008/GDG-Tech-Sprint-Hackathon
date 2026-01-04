@@ -3,6 +3,10 @@ import pickle
 import numpy as np
 import os
 
+import warnings
+# Ignoring the specific warning about feature names
+warnings.filterwarnings("ignore", category=UserWarning)
+
 app = Flask(__name__)
 
 # --- 1. LOAD THE TRAINED MODEL ---
@@ -72,4 +76,5 @@ def predict():
 
 if __name__ == '__main__':
     # This block only runs when you test locally on your laptop
+
     app.run(debug=True, port=5000)
